@@ -51,9 +51,9 @@
 # Allow this node to store data (enabled by default):
 #
 #node.data: true
-{% if es_etc_node_master is defined %}node.master: {{ es_etc_node_master }}{% endif %}
+{% if es_etc_node_master is defined %}node.master: {{ es_etc_node_master | lower }}{% endif %}
 
-{% if es_etc_node_data is defined %}node.data: {{ es_etc_node_data }}{% endif %}
+{% if es_etc_node_data is defined %}node.data: {{ es_etc_node_data | lower }}{% endif %}
 
 # You can exploit these settings to design advanced cluster topologies.
 #
